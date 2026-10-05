@@ -10,7 +10,8 @@ if ($basePath !== '' && ($path === $basePath || str_starts_with($path, $basePath
 $links = [
     ['/courses',       'Cours',        'fa-book-open'],
     ['/subjects',      'Matières',     'fa-shapes'],
-     ['/exams',         'Épreuves',     'fa-file-pen'],  
+    ['/exams',         'Épreuves',     'fa-file-pen'],
+    ['/quizzes',       'Quiz',         'fa-circle-question'],
     ['/subscriptions', 'Abonnements',  'fa-crown'],
     ['/testimonials',  'Témoignages',  'fa-comments'],
     ['/contact',       'Contact',      'fa-envelope'],
