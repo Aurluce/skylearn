@@ -1,0 +1,14 @@
+# Point d'entrée de l'application lorsque le projet est servi depuis htdocs/skylearn.
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Laisser les URL explicitement préfixées par /public/ être gérées par public/.htaccess.
+    RewriteRule ^public/ - [L]
+
+    # Les assets publics sont conservés sous /assets/... et servis depuis public/assets/.
+    RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+
+    # Les chemins applicatifs, y compris la racine du dossier du projet, passent au routeur.
+    RewriteRule ^ public/index.php [QSA,L]
+</IfModule>
